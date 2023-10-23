@@ -3,7 +3,7 @@
   "version": "0.6.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run-many --target=serve --projects=web, api",
+    "start": "nx run-many --target=serve --projects=web,api",
     "build": "rimraf dist && nx run-many --target=build --projects=web,api --skip-nx-cache",
     "prebuild": "npm --no-git-tag-version version minor"
   },
