@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx run-many --target=build --projects=web --skip-nx-cache",
-    "startTime": "2023-10-23T20:59:07.636Z",
-    "endTime": "2023-10-23T20:59:37.906Z",
+    "startTime": "2023-10-23T21:02:56.580Z",
+    "endTime": "2023-10-23T21:03:16.644Z",
     "inner": false
   },
   "tasks": [
@@ -11,8 +11,8 @@
       "target": "build",
       "projectName": "web",
       "hash": "12262742281134368973",
-      "startTime": "2023-10-23T20:59:07.643Z",
-      "endTime": "2023-10-23T20:59:37.903Z",
+      "startTime": "2023-10-23T21:02:56.587Z",
+      "endTime": "2023-10-23T21:03:16.641Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

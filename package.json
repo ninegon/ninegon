@@ -1,6 +1,6 @@
 {
   "name": "@ninegon/source",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target=serve --projects=web",
