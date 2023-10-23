@@ -1,0 +1,946 @@
+<nav class="navbar navbar-expand-lg">
+
+  <button class="navbar-toggler" style="margin-left: 15px" type="button" (click)="navbarOpen = !navbarOpen">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+
+  <div class="collapse navbar-collapse mt-2" [ngClass]="{ 'show': navbarOpen }"
+    [ngClass.gt-md]="'d-flex justify-content-center'">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <p class="nav-link styleNav" (click)="scroll(sobreNosotros)">Sobre nosotros</p>
+      </li>
+      <li class="nav-item">
+        <p class="nav-link styleNav" (click)="scroll(servicios)">Servicios</p>
+      </li>
+      <li class="nav-item">
+        <p class="nav-link styleNav" (click)="scroll(preguntasFrecuentes)">Preguntas frecuentes</p>
+      </li>
+      <li class="nav-item">
+        <p class="nav-link styleNav" (click)="scroll(contactaConNosotros)">Contacto</p>
+      </li>
+    </ul>
+  </div>
+</nav>
+<section id="hero" class="d-flex align-items-center min-vh-100" (mouseenter)="mouseIn = true"
+  (mouseleave)="mouseIn = false"
+  style="background-image: url(assets/images/welcome/lineas.svg); background-size: auto; ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <h1 data-aos="fade-up">SANFRAN Facility Services</h1>
+        <h2 data-aos="fade-up">Servicios integrales a comunidades y empresas.</h2>
+        <!-- <div data-aos="fade-up" >
+              <a class="btn-get-started scrollto" [routerLink]="'/clients'">Go to San Fran</a>
+            </div> -->
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" #image>
+        <img src="assets/images/welcome/hero.png" class="img-fluid animated" alt="">
+      </div>
+    </div>
+  </div>
+
+</section><!-- End Hero -->
+<!-- <mat-card>hola</mat-card> -->
+<main id="main">
+
+  <!-- ======= About Us Section ======= -->
+  <section id="about" class="about" #sobreNosotros>
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Sobre nosotros</h2>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6" data-aos="fade-up">
+          <p>
+            Cambiamos los resultados y <strong>mejoramos la estética e imagen de sus instalaciones</strong>.
+          </p>
+          <p>
+            Desde <strong>SANFRAN Facility Services</strong> nos hemos adaptado a un modelo de prestación de
+            <strong>servicios integrales</strong>, y desde hace mas de diez años ponemos a su disposición un abanico
+            de
+            servicios para el <strong>mantenimiento integral de sus instalaciones</strong><br>
+          </p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <p>
+            Tenemos presente que la materia prima de nuestra empresa son las personas, por lo tanto, nos basamos en
+            dar un servicio por medio de personal cualificado, responsable y de confianza.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Us Section -->
+
+  <!-- ======= Counts Section ======= -->
+  <section id="counts" class="counts">
+    <div class="container">
+
+      <div class="row">
+        <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start"
+          data-aos="fade-right">
+          <img src="assets/images/welcome/counts.png" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left">
+          <div class="content d-flex flex-column justify-content-center">
+            <div class="row">
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <i class="icofont-simple-smile"></i>
+                  <span data-toggle="counter-up">+50</span>
+                  <p><strong>Mas de 50 clientes</strong> confian en nuestros servicio.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                  <i class="icofont-document-folder"></i>
+                  <span data-toggle="counter-up">+10</span>
+                  <p>Mas de <strong>10 años</strong> de experiencia en el sector.</p>
+                </div>
+              </div>
+
+
+              <!-- <div class="col-md-6 d-md-flex align-items-md-stretch">
+                      <div class="count-box">
+                        <i class="icofont-award"></i>
+                        <span data-toggle="counter-up">15</span>
+                        <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+                      </div>
+                    </div> -->
+            </div>
+          </div><!-- End .content-->
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services" #servicios>
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Servicios</h2>
+        <p>Nuestro principal objetivo, la satisfacción de nuestros clientes</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up">
+            <div class="icon"><i class="fa fa-book"></i></div>
+            <h4 class="title">Protocolos</h4>
+            <p class="description">Todas las acciones se ejecutan bajo un previo protocolo de actuación, de
+              esta manera nos aseguramos de que nuestro trabajo siempre se realiza de la mejor manera posible.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up">
+            <div class="icon"><i class="fa fa-eye"></i></div>
+            <h4 class="title">Supervisión</h4>
+            <p class="description">Nuestros técnicos o encargados de zona supervisaran cualquiera de los cometidos o
+              servicios realizados anteriormente, optimizando así las necesidades de nuestros
+              clientes.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up">
+            <div class="icon"><i class="fa fa-cogs"></i></div>
+            <h4 class="title">Rendimiento</h4>
+            <p class="description">Nuestra experiencia demuestra que, englobando todos nuestros servicios en una
+              única empresa, los costes finales se reducen hasta en un 20%.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up">
+            <div class="icon"><i class="fa fa-users"></i></div>
+            <h4 class="title">Cobertura</h4>
+            <p class="description">Si un empleado no pudiera realizar su labor por vacaciones, enfermedad, u otra
+              circunstancia, nuestro equipo se encargará de asignar otro trabajador/a de confianza
+              inmediatamente. </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= More Services Section ======= -->
+  <section id="more-services" class="more-services">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-stretch" (click)="scroll(jardineria)">
+          <div class="card" style='background-image: url("assets/images/welcome/more-services-1.jpg");'
+            data-aos="fade-up">
+            <div class="card-body">
+              <h5 class="card-title">Jardinería</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" (click)="scroll(limpieza)">
+          <div class="card" style='background-image: url("assets/images/welcome/more-services-2.jpg");'
+            data-aos="fade-up">
+            <div class="card-body">
+              <h5 class="card-title">Limpieza</h5>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6 d-flex align-items-stretch mt-4" (click)="scroll(conserjeria)">
+          <div class="card" style='background-image: url("assets/images/welcome/more-services-3.jpg");'
+            data-aos="fade-up">
+            <div class="card-body">
+              <h5 class="card-title">Conserjería</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-stretch mt-4" (click)="scroll(piscinas)">
+          <div class="card" style='background-image: url("assets/images/welcome/more-services-4.jpg");'
+            data-aos="fade-up">
+            <div class="card-body">
+              <h5 class="card-title">Piscinas</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End More Services Section -->
+
+  <!-- ======= Features Section ======= -->
+  <section id="features" class="features">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Nuestro trabajo</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p> -->
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #ffbb2c; padding-right: 10px;">home</mat-icon>
+            <h3 style="padding-left: 10px">Comunidades de propietarios y edificios</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #5578ff; padding-right: 10px;">work</mat-icon>
+            <h3 style="padding-left: 10px">Oficinas y empresas</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #e80368; padding-right: 10px;">school</mat-icon>
+            <h3 style="padding-left: 10px">centros educativos, academias y guarderías</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #e361ff; padding-right: 10px;">directions_run</mat-icon>
+            <h3 style="padding-left: 10px">centros deportivos</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #b2904f; padding-right: 10px;">hourglass_full</mat-icon>
+            <h3 style="padding-left: 10px">Servicio puntual o intensivo</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #ffa76e; padding-right: 10px;">calendar_today</mat-icon>
+            <h3 style="padding-left: 10px">Servicios de 24h los 365 días del año</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #11dbcf; padding-right: 10px;">access_time</mat-icon>
+            <h3 style="padding-left: 10px">Control de accesos</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #ff5828; padding-right: 10px;">pool</mat-icon>
+            <h3 style="padding-left: 10px">Socorristas</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i style="color: #47aeff; padding-right: 10px; font-size: 24px;" class="fa fa-snowflake-o"
+              aria-hidden="true"></i>
+
+            <h3 style="padding-left: 10px">Mantenimiento de invernaje</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i style="color: #b20969; padding-right: 10px; font-size: 24px;" class="fa fa-wrench"
+              aria-hidden="true"></i>
+            <h3 style="padding-left: 10px">Reparación de averías</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i style="color: #4233ff; padding-right: 10px; font-size: 24px;" class="fa fa-tint" aria-hidden="true"></i>
+            <h3 style="padding-left: 10px">Control de calidad del agua</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <mat-icon style="color: #29cc61; padding-right: 10px;">add</mat-icon>
+            <h3 style="padding-left: 10px">Y muchos mas...</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Features Section -->
+
+  <section id="about" class="about" #jardineria>
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Jardinería</h2>
+        <p>Mantenimiento integral de jardines</p>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6 mb-2" data-aos="fade-up">
+          <p>
+            Expertos en diseño y mantenimiento de zonas verdes. Jardineros con experiencia para comunidades, empresas y
+            particulares. Proyectos personalizados.
+          </p>
+          <p>
+            Obtenemos excelentes resultados ajustando la frecuencia según las instalaciones. Nuestra maquinaria moderna
+            agiliza el trabajo, beneficiando a nuestros empleados y clientes.
+          </p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <li>Diseño de jardines, parterres y zonas ajardinadas</li>
+          <li>Mantenimiento puntual o continuado de jardines</li>
+          <li>Podas y talas de árboles y arbustos </li>
+          <li>Instalación de sistemas de riego</li>
+          <li>Control fitosanitario</li>
+          <li>Tratamientos alternativos de endoterapia a pinos y palmeras</li>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Us Section -->
+
+  <section id="about" class="about" #limpieza>
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Limpieza</h2>
+        <p>Higienización de instalaciones</p>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6 mb-2" data-aos="fade-up">
+          <p>
+            Confíe en nosotros para el mantenimiento y conservación de sus instalaciones. Nos hacemos cargo de todo,
+            desde el personal hasta los materiales, garantizando resultados profesionales y adaptándonos a sus
+            necesidades sin interrupciones en el funcionamiento normal de sus instalaciones.
+          </p>
+          <p>
+            Cooperamos en la planificación del horario para no interrumpir su actividad. Supervisamos rigurosamente
+            nuestros servicios de limpieza.
+          </p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <p>Ofrecemos limpieza de fin de obra, viviendas, garajes, pavimentos, cristales, piscinas y eliminación de
+            graffitis, entre otros servicios.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Us Section -->
+  <section id="about" class="about" #conserjeria>
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Conserjerías</h2>
+        <p>Conserjes y controladores de acceso</p>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6 mb-2" data-aos="fade-up">
+          <p>
+            Un conserje puede ser una inversión valiosa para sus instalaciones, ya que conoce a fondo el lugar y puede
+            actuar en caso de anomalías o emergencias. Nos aseguramos de que el conserje sea amable y servicial, pero no
+            servil, y se integre bien en el entorno.<br>
+          </p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <p>
+            No recomendamos contratar sin una selección cuidadosa, ya que esta persona debe tener habilidades para la
+            gestión de incidencias y conocimientos en mantenimiento.
+          </p>
+
+          <li>Realizamos servicios de 24 horas los 365 días del año.</li>
+          <li>Servicios de controlador de accesos.</li>
+          <li>Servicios de conserjería.</li>
+          <li>Servicio de conserjería plus.</li>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Us Section -->
+
+  <section id="about" class="about" #piscinas>
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Piscinas</h2>
+        <p>Mantenimiento integral de instalaciones acuáticas</p>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6 mb-2" data-aos="fade-up">
+          <p>
+            Entendemos la importancia de las piscinas y ofrecemos servicios de conservación y reparación para todo tipo
+            de instalaciones acuáticas, desde piscinas privadas hasta centros deportivos de gran tamaño. No se preocupe
+            por nada, nosotros nos encargamos.
+          </p>
+          <p>
+            Con el tiempo y el uso de cloro, el vaso de la piscina sufre desgaste. Nuestra reconstrucción la restaura y
+            mejora. Asesoramiento profesional para instalaciones seguras y funcionales.<br></p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <p>
+            Seleccionamos y contratamos socorristas cualificados y acreditados según la legislación vigente.
+          </p>
+          <li>Adaptación de instalaciones a la normativa vigente</li>
+          <li>Gestión de licencias de reapertura</li>
+          <li>Visitas técnicas/soporte técnico/medición de parámetros</li>
+          <li>Tratamiento químico</li>
+          <li>Control de la calidad del agua mediante análisis físico-químicos o microbiológicos</li>
+          <li>Instalación de cloradores salinos, cobertores y mantas térmicas</li>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Us Section -->
+
+  <section id="about" class="about">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Mantenimiento general</h2>
+        <p>Reparación y mantenimiento de instalaciones</p>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-12" data-aos="fade-up">
+          <p>
+            Ofrecemos servicios de mantenimiento básico en todas nuestras ofertas, ya sean puntuales o continuados.
+            Cubrimos campos como electricidad, cerrajería, albañilería, fontanería y pintura. </p>
+          <p>
+            Asesoramos, proyectamos y resolvemos sus necesidades de forma rápida y profesional, sin preocupaciones para usted.</p>
+          <p>Ofrecemos una oferta personalizada con personal cualificado, responsable y de confianza.</p>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Us Section -->
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials section-bg" *ngIf="false">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Magnam dolores commodi suscipit eum quidem consectetur velit</p>
+      </div>
+
+      <div class="owl-carousel testimonials-carousel" data-aos="fade-up">
+
+        <div class="testimonial-wrap">
+          <div class="testimonial-item">
+            <img src="assets/images/welcome/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <h3>Saul Goodman</h3>
+            <h4>Ceo &amp; Founder</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+              quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial-wrap">
+          <div class="testimonial-item">
+            <img src="assets/images/welcome/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+              quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial-wrap">
+          <div class="testimonial-item">
+            <img src="assets/images/welcome/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
+              tempor
+              labore quem eram duis noster aute amet eram fore quis sint minim.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial-wrap">
+          <div class="testimonial-item">
+            <img src="assets/images/welcome/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <h3>Matt Brandon</h3>
+            <h4>Freelancer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
+              minim
+              dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonial-wrap">
+          <div class="testimonial-item">
+            <img src="assets/images/welcome/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <h3>John Larson</h3>
+            <h4>Entrepreneur</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+              labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Testimonials Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio p0" *ngIf="false">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block aos-init aos-animate" data-aos="fade-up"
+          href="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" data-fancybox="gal">
+          <img src="https://imborrable.com/wp-content/uploads/2022/10/fotos-gratis-de-stock-1.jpg" alt="Image"
+            class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team section-bg" *ngIf="false">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up">
+            <div class="member-img">
+              <img src="assets/images/welcome/team/team-1.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="icofont-twitter"></i></a>
+                <a href=""><i class="icofont-facebook"></i></a>
+                <a href=""><i class="icofont-instagram"></i></a>
+                <a href=""><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Walter White</h4>
+              <span>Chief Executive Officer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up">
+            <div class="member-img">
+              <img src="assets/images/welcome/team/team-2.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="icofont-twitter"></i></a>
+                <a href=""><i class="icofont-facebook"></i></a>
+                <a href=""><i class="icofont-instagram"></i></a>
+                <a href=""><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Sarah Jhonson</h4>
+              <span>Product Manager</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up">
+            <div class="member-img">
+              <img src="assets/images/welcome/team/team-3.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="icofont-twitter"></i></a>
+                <a href=""><i class="icofont-facebook"></i></a>
+                <a href=""><i class="icofont-instagram"></i></a>
+                <a href=""><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>William Anderson</h4>
+              <span>CTO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <div class="member" data-aos="fade-up">
+            <div class="member-img">
+              <img src="assets/images/welcome/team/team-4.jpg" class="img-fluid" alt="">
+              <div class="social">
+                <a href=""><i class="icofont-twitter"></i></a>
+                <a href=""><i class="icofont-facebook"></i></a>
+                <a href=""><i class="icofont-instagram"></i></a>
+                <a href=""><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Amanda Jepson</h4>
+              <span>Accountant</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Team Section -->
+
+  <!-- ======= Pricing Section ======= -->
+  <section id="pricing" class="pricing" *ngIf="false">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Pricing</h2>
+        <p>Sit sint consectetur velit nemo qui impedit suscipit alias ea</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="box" data-aos="zoom-in-right">
+            <h3>Free</h3>
+            <h4><sup>$</sup>0<span> / month</span></h4>
+            <ul>
+              <li>Aida dere</li>
+              <li>Nec feugiat nisl</li>
+              <li>Nulla at volutpat dola</li>
+              <li class="na">Pharetra massa</li>
+              <li class="na">Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+          <div class="box recommended" data-aos="zoom-in">
+            <h3>Business</h3>
+            <h4><sup>$</sup>19<span> / month</span></h4>
+            <ul>
+              <li>Aida dere</li>
+              <li>Nec feugiat nisl</li>
+              <li>Nulla at volutpat dola</li>
+              <li>Pharetra massa</li>
+              <li class="na">Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+          <div class="box" data-aos="zoom-in-left">
+            <h3>Developer</h3>
+            <h4><sup>$</sup>29<span> / month</span></h4>
+            <ul>
+              <li>Aida dere</li>
+              <li>Nec feugiat nisl</li>
+              <li>Nulla at volutpat dola</li>
+              <li>Pharetra massa</li>
+              <li>Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Pricing Section -->
+
+  <!-- ======= F.A.Q Section ======= -->
+  <section id="faq" class="faq" #preguntasFrecuentes>
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+
+      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+        <div class="col-lg-5">
+          <i class="ri-question-line"></i>
+          <h4>¿Cuál es el procedimiento para contratar un servicio?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            Tras ponerte en contacto con
+            nosotros via email, teléfono o una visita a nuestra oficina, acordamos una visita previa en
+            sus instalaciones, observamos las peculiaridades y en 24 horas le facilitamos una oferta
+            ajustada a sus necesidades.
+          </p>
+        </div>
+      </div><!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+        <div class="col-lg-5">
+          <i class="ri-question-line"></i>
+          <h4>¿Qué ofrece un servicio integral?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            Contratando todos los servicios necesitados con
+            nosotros, optimizamos el rendimiento y la productividad de nuestros empleados. Además,
+            mejoramos la gestión y resultados, consiguiendo ahorrarles tiempo y dinero a nuestros
+            clientes.
+          </p>
+        </div>
+      </div><!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+        <div class="col-lg-5">
+          <i class="ri-question-line"></i>
+          <h4>No tenemos claro el tiempo que necesitamos para prestar el servicio ¿Pueden
+            aconsejarnos?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            Por supuesto, podemos visitarles y realizar un programa de trabajo según
+            sus necesidades y valorarlo en tiempo y coste sin ningún compromiso.
+          </p>
+        </div>
+      </div><!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+        <div class="col-lg-5">
+          <i class="ri-question-line"></i>
+          <h4>¿Cuánto tiempo tardan en solucionar una urgencia?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            Dependiendo del servicio,
+            disponemos de un teléfono 24 horas, cubierto por los supervisores de la empresa, para así
+            poder cubrir cualquier eventualidad en el menor tiempo posible.
+          </p>
+        </div>
+      </div><!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+        <div class="col-lg-5">
+          <i class="ri-question-line"></i>
+          <h4>¿Existe la posibilidad de cambiar al trabajador/a, que es obligatorio subrogarlo,
+            por otro personal de la empresa?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            El convenio establece la obligación de subrogación
+            de todo el personal que lleve mas de cuatro meses prestando servicio. Para acomodar el
+            deseo del cliente, comprobamos la documentación para establecer dicha obligación, y se
+            le ofrece a este/a un nuevo destino por las horas prestadas siempre que se aprecie calidad
+            y responsabilidad.
+          </p>
+        </div>
+      </div><!-- End F.A.Q Item-->
+
+      <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+        <div class="col-lg-5">
+          <i class="ri-question-line"></i>
+          <h4>¿Cómo sé que van a ofrecer un servicio de calidad y confianza?</h4>
+        </div>
+        <div class="col-lg-7">
+          <p>
+            Existen muchas
+            razones, pero principalmente es por nuestro modelo de negocio, que radica en tener una
+            visión a largo plazo, ir sumando clientes satisfechos que nos recomienden a familiares y
+            amigos.
+          </p>
+        </div>
+      </div><!-- End F.A.Q Item-->
+
+    </div>
+  </section><!-- End F.A.Q Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact" #contactaConNosotros>
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Contacta con nosotros</h2>
+      </div>
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-5 col-md-12" data-aos="fade-up">
+          <div class="form-group">
+            <input class="form-control" placeholder="Correo electrónico" data-rule="email" [formControl]="contact" />
+            <div class="validate"></div>
+          </div>
+          <div class="form-group mt-1">
+            <textarea class="form-control" rows="5" data-rule="required" data-msg="Please write something for us"
+              placeholder="Mensaje" [formControl]="message"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="text-center mt-2 mb-5"><button mat-flat-button color="primary" (click)="contactUs()"
+              [disabled]="!contact.value || !message.value">Enviar mensaje</button></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3 text-center">
+          <!-- Grid column -->
+          <div class="col-md-6">
+            <img src="assets/images/welcome/hero.png" alt="" style="width: 240px">
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+
+            <h2 class="text-uppercase fw-bold mb-4">SANFRAN FACILITY SERVICES
+            </h2>
+            <p> <i class="fa fa-envelope me-3"></i><strong>info@sanfran.es</strong> </p>
+            <p><i class="fa fa-phone me-3"></i><strong>91 025 95 63</strong></p>
+            <p><i class="fa fa-phone me-3"></i><strong>625 252 347</strong></p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4">
+      &copy;{{year}} SANFRAN Facility Services | Todos los derechos reservados
+    </div>
+    <p></p>
+  </footer>
+
+</main><!-- End #main -->

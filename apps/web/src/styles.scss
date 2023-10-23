@@ -1,0 +1,211 @@
+@use '@angular/material' as mat;
+@import "@angular/material/theming";
+
+// @import '~quill/dist/quill.bubble.css'; 
+// @import '~quill/dist/quill.snow.css';
+
+@include mat.core();
+
+
+* {
+  font-size: 14px;
+}
+
+$angular-primary: mat.define-palette(mat.$indigo-palette, 400, 100, 900);
+$angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$angular-warn: mat.define-palette(mat.$red-palette);
+
+$angular-default-theme: mat.define-light-theme((color: (primary: $angular-primary,
+        accent: $angular-accent,
+        warn: $angular-warn,
+      ),
+    ));
+
+@include mat.all-component-themes($angular-default-theme);
+
+$angular-dark-theme: mat.define-dark-theme((color: (primary: $angular-primary,
+        accent: $angular-accent,
+        warn: $angular-warn,
+      ),
+    ));
+
+.darkMode {
+  @include mat.all-component-colors($angular-dark-theme);
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+
+.dialogDefault {
+
+  box-shadow: 0;
+
+  mat-dialog-container {
+    border-radius: 8px;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.5)
+  }
+}
+
+.matBottomClass {
+  max-width: 750px !important;
+}
+
+.menu .mat-dialog-container {
+  padding: 0;
+  border-radius: 8px;
+}
+
+
+body {
+  transition: background-color 0.5s ease;
+}
+
+.card {
+  transition: background-color 0.5s ease;
+}
+
+h3 {
+  transition: color 0.5s ease;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.customMatCard {
+  border: 1px solid #e4e4e4;
+  border-radius: 8px !important;
+}
+
+.full-screen-modal .mat-dialog-container {
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.accent-color {
+  color: mat-color($angular-accent) !important;
+}
+
+*[appearance="outline"] .mat-form-field-wrapper:not(:has(mat-hint)):not(:has(mat-error)) {
+  padding-bottom: 0 !important;
+}
+
+*#zone .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 2px 0;
+}
+
+mat-card {
+  padding: 16px 0 16px 0px !important;
+}
+
+mat-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fontAwesome {
+  font-family: 'Helvetica', FontAwesome, sans-serif !important;
+}
+
+.customWidth {
+  width: calc(100% - 10px);
+}
+
+.red-snackbar {
+  background: rgb(139, 0, 0);
+  color: white;
+}
+
+.disconnectClass .mat-dialog-container {
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  height: 400px
+}
+
+.mdc-data-table__cell,
+.mdc-data-table__header-cell {
+  padding: 0 !important
+}
+
+
+@media (min-width: 901px) {
+  .mat-date-range-input-mirror {
+    padding-right: 4px
+  }
+}
+
+::ng-deep .letMarginsDialog {
+  mat-dialog-container {
+    padding: 10px;
+  }
+}
+
+.mat-mdc-menu-item {
+  min-height: 32px !important;
+}
+
+.mat-mdc-menu-content {
+  padding: 0px !important
+}
+
+.menuDialog {
+  max-width: 1800px;
+  width: 100%;
+}
+
+.clientDialog {
+  max-width: 800px !important;
+  width: 100%;
+}
+
+mat-row:not([bigSize='true']), mat-footer-row {
+  min-height: 18px !important;
+  height: 28px !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 100%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #AAA;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+  border-radius: 10px;
+}
+
+.widthEmail {
+  width: 950px !important;
+}
