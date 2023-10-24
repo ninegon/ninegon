@@ -401,8 +401,8 @@ h6 {
   }
 
   // #hero .animated {
-    // -webkit-animation: none;
-    // animation: none;
+  // -webkit-animation: none;
+  // animation: none;
   // }
 
   #hero .hero-img {
@@ -487,6 +487,7 @@ section {
 }
 
 @media (min-width: 768px) {
+
   .section-title h2::before,
   .section-title h2::after {
     content: "";
@@ -4634,5 +4635,11 @@ figure figcaption {
 
 .linesImage:after {
   content: "";
-  background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 69%,rgba(255,255,255,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 100%);
+}
+
+.img-clients {
+  max-height: 280px;
+  height: 280px;
+  margin: auto;
 }
