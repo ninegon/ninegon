@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.titleService.setTitle('SANFRAN Facility Services');
+    this.titleService.setTitle('NINEGON');
     AOS.init({
       duration: 750,
       delay: 150,

@@ -1,3 +1,28 @@
+p::selection,
+li::selection,
+i::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+img::selection,
+strong::selection,
+input::selection,
+textarea::selection,
+span::selection,
+div::selection {
+  background: #3498db;
+  color: #fff;
+}
+
+p::-moz-selection {
+  background: green;
+  color: black;
+  text-shadow: 1px 1px #fff;
+}
+
 a {
   color: #3498db;
 }
@@ -4529,6 +4554,7 @@ figure figcaption {
   -webkit-transform: scale(1) !important;
   -ms-transform: scale(1) !important;
   transform: scale(1) !important;
+  margin: auto;
 }
 
 .gal-item:hover {
