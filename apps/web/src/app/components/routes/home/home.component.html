@@ -15,7 +15,7 @@
         <p class="nav-link styleNav" (click)="scroll(method)">Método de Trabajo</p>
       </li>
       <li class="nav-item">
-        <p class="nav-link styleNav" (click)="scroll(ourServices)">Servicios y Clientes</p>
+        <p class="nav-link styleNav" (click)="scroll(ourServices)">Servicios</p>
       </li>
       <li class=" nav-item">
         <p class="nav-link styleNav" (click)="scroll(faq)">Preguntas frecuentes</p>
@@ -192,10 +192,15 @@
     </div>
   </section><!-- End Work method Section -->
 
+  <div class="text-center mt-2 mb-5"><button mat-flat-button color="primary" (click)="scroll(newEmail)">¡Quiero ser el
+      próximo cliente!</button></div>
 
   <!-- ======= More Services Section ======= -->
-  <section id="more-services" class="more-services">
+  <section id="more-services" class="more-services" #ourServices>
     <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Servicios</h2>
+      </div>
 
       <div class="row">
         <div class="col-md-6 d-flex align-items-stretch" (click)="scroll(web)">
@@ -299,8 +304,8 @@
           </p>
           <p>Haz que tu negocio destaque en un mercado competitivo con soluciones de software a medida.
           </p>
-          <p> Si quieres saber más, ponte en contacto haciendo <span class="clickHereToRedirect"
-              (click)="scroll(newEmail)">click aquí.</span></p>
+          <p> Si quieres saber más, <span class="clickHereToRedirect" (click)="scroll(newEmail)"> ponte en
+              contacto.</span></p>
         </div>
       </div>
 
@@ -370,12 +375,11 @@
 
 
   <!-- ======= Features Section ======= -->
-  <section id="features" class="features" #ourServices>
+  <section id="features" class="features">
     <div class="container">
 
       <div class="section-title" data-aos="fade-up">
-        <h2>Servicios</h2>
-        <p>Tenemos gran variedad de servicios que están incluidos al trabajar con nosotros</p>
+        <p>Además, todos los siguientes servicios están incluidos al trabajar con nosotros</p>
       </div>
 
       <div class="row" data-aos="fade-up">
@@ -396,7 +400,7 @@
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <mat-icon style="color: #e361ff; padding-right: 10px;">directions_run</mat-icon>
-            <h3 style="padding-left: 10px">Páginas fluidas</h3>
+            <h3 style="padding-left: 10px">Fluidez en la carga</h3>
           </div>
         </div>
 
@@ -452,7 +456,7 @@
 
 
   <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio p0">
+  <!-- <section id="portfolio" class="portfolio p0">
     <div class="container">
 
       <div class="section-title" data-aos="fade-up">
@@ -486,10 +490,8 @@
 
     </div>
 
-  </section><!-- End Portfolio Section -->
+  </section>End Portfolio Section -->
 
-  <div class="text-center mt-2 mb-5"><button mat-flat-button color="primary" (click)="scroll(newEmail)">¡Quiero ser el
-      próximo cliente!</button></div>
 
   <!-- ======= Team Section ======= -->
   <section id="team" class="team section-bg" *ngIf="false">
