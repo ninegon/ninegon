@@ -20,7 +20,11 @@ export class MailController {
 
   @Post('sendRequest')
   async sendRequest(@Body('contact') contact: string, @Body('message') message: string) {
-    await this.mailService.sendContactUs(contact, message)
+    try {
+      await this.mailService.sendContactUs(contact, message)
+    } catch (e) {
+      return e
+    }
   }
   
 }
