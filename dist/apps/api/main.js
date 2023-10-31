@@ -20,12 +20,14 @@ const mail_module_1 = __webpack_require__(5);
 const mailer_1 = __webpack_require__(7);
 const path_1 = __webpack_require__(9);
 const handlebars_adapter_1 = __webpack_require__(10);
+const status_module_1 = __webpack_require__(11);
 let AppModule = exports.AppModule = class AppModule {
 };
 exports.AppModule = AppModule = tslib_1.__decorate([
     (0, common_1.Module)({
         imports: [
             mail_module_1.MailModule,
+            status_module_1.StatusModule,
             mailer_1.MailerModule.forRoot({
                 transport: process.env.EMAIL_TRANSPORT,
                 defaults: {
@@ -154,6 +156,113 @@ module.exports = require("path");
 /***/ ((module) => {
 
 module.exports = require("@nestjs-modules/mailer/dist/adapters/handlebars.adapter");
+
+/***/ }),
+/* 11 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.StatusModule = void 0;
+const tslib_1 = __webpack_require__(3);
+const common_1 = __webpack_require__(4);
+const status_controller_1 = __webpack_require__(12);
+let StatusModule = exports.StatusModule = class StatusModule {
+};
+exports.StatusModule = StatusModule = tslib_1.__decorate([
+    (0, common_1.Module)({
+        controllers: [status_controller_1.StatusController]
+    })
+], StatusModule);
+
+
+/***/ }),
+/* 12 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.StatusController = void 0;
+const tslib_1 = __webpack_require__(3);
+const common_1 = __webpack_require__(4);
+const BaseController_1 = __webpack_require__(13);
+var pjson = __webpack_require__(15);
+let StatusController = exports.StatusController = class StatusController extends BaseController_1.BaseController {
+    ping() {
+        return this.returnData({
+            status: 'OK',
+            version: pjson.version + (process.env.NODE_ENV === 'development' ? '-dev' : ''),
+            _server: {
+                _date: new Date().toLocaleString('es-ES'),
+                _node: process.env.NODO
+            }
+        });
+    }
+};
+tslib_1.__decorate([
+    (0, common_1.Get)('ping'),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", []),
+    tslib_1.__metadata("design:returntype", void 0)
+], StatusController.prototype, "ping", null);
+exports.StatusController = StatusController = tslib_1.__decorate([
+    (0, common_1.Controller)('status')
+], StatusController);
+
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.BaseController = void 0;
+const common_1 = __webpack_require__(4);
+const express_1 = __webpack_require__(14);
+class BaseController {
+    constructor() {
+        this.checkEmptyValue = (str) => !str || !`${str}`.trim().length;
+        this.errorStatusDefault = common_1.HttpStatus.CONFLICT;
+        this.errorMessageDefault = 'Unexpected internal error';
+        this.error = (error, status) => {
+            // protected error = (mensaje: string, T: HttpStatus = HttpStatus.NOT_FOUND) => {
+            let mensaje = undefined;
+            if (/^String$/.test(error.constructor.name)) {
+                mensaje = error;
+            }
+            else if (/^(TypeError|QueryFailedError)$/.test(error.constructor.name)) {
+                mensaje = error.customMessage;
+            }
+            else if (/^HttpException$/.test(error.constructor.name)) {
+                mensaje = error['response'];
+                status = error['status'];
+            }
+            throw new common_1.HttpException(mensaje ? mensaje : this.errorMessageDefault, status || this.errorStatusDefault);
+        };
+        this.returnData = (data, request, status = 200) => {
+            if (!data)
+                this.error('No data to return');
+            if (Array.isArray(data) && !data[0])
+                this.error('No data to return');
+            express_1.response.status(status);
+            return data;
+        };
+    }
+}
+exports.BaseController = BaseController;
+
+
+/***/ }),
+/* 14 */
+/***/ ((module) => {
+
+module.exports = require("express");
+
+/***/ }),
+/* 15 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"name":"@ninegon/source","version":"0.17.0","license":"MIT","scripts":{"start":"nx run-many --target=serve --projects=web,api","build":"rimraf dist && nx run-many --target=build --projects=web,api --skip-nx-cache","prebuild":"npm --no-git-tag-version version minor"},"private":true,"dependencies":{"@angular/animations":"~16.2.0","@angular/cdk":"^16.2.1","@angular/common":"~16.2.0","@angular/compiler":"~16.2.0","@angular/core":"~16.2.0","@angular/flex-layout":"^15.0.0-beta.42","@angular/forms":"~16.2.0","@angular/material":"^16.2.1","@angular/platform-browser":"~16.2.0","@angular/platform-browser-dynamic":"~16.2.0","@angular/router":"~16.2.0","@fortawesome/angular-fontawesome":"^0.13.0","@fortawesome/free-solid-svg-icons":"^6.4.2","@nestjs-modules/mailer":"^1.9.1","@nestjs/common":"^10.0.2","@nestjs/config":"^3.0.0","@nestjs/core":"^10.0.2","@nestjs/jwt":"^10.1.0","@nestjs/mapped-types":"*","@nestjs/passport":"^10.0.1","@nestjs/platform-express":"^10.2.2","@nestjs/platform-socket.io":"^10.2.2","@nestjs/schedule":"^3.0.3","@nestjs/typeorm":"^10.0.0","@nestjs/websockets":"^10.2.2","@ngrx/effects":"^16.2.0","@ngrx/store":"^16.2.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@nrwl/angular":"^16.7.4","@nrwl/nx-cloud":"^16.3.0","@nrwl/workspace":"^16.7.4","@types/date-fns":"^2.6.0","@types/jasmine":"^4.3.5","@types/pdfmake":"^0.2.2","@types/uuid":"^9.0.2","angular-animations":"^0.11.0","aos":"^2.3.4","axios":"^1.0.0","bootstrap":"^5.3.1","class-validator":"^0.14.0","crypto-js":"^4.1.1","date-fns":"^2.30.0","dotenv":"^16.3.1","file-saver":"^2.0.5","handlebars":"^4.7.8","html-pdf":"^3.0.1","jquery":"^3.7.1","jszip":"^3.10.1","moment":"^2.29.4","mysql2":"^3.6.0","ngx-cookie-service":"^16.0.1","ngx-quill":"^22.1.0","ngx-socket-io":"^4.5.1","nodemailer":"^6.9.4","passport-jwt":"^4.0.1","path":"^0.12.7","pdfmake":"^0.2.7","process":"^0.11.10","ramda":"^0.29.0","reflect-metadata":"^0.1.13","rimraf":"^5.0.1","rxjs":"^7.8.0","save-dev":"^0.0.1-security","socket.io-client":"^4.7.2","tslib":"^2.3.0","typeorm":"^0.3.17","uuid":"^9.0.0","xlsx":"^0.18.5","zone.js":"^0.13.1"},"devDependencies":{"@angular-devkit/build-angular":"~16.2.0","@angular-devkit/core":"~16.2.0","@angular-devkit/schematics":"~16.2.0","@angular-eslint/eslint-plugin":"~16.0.0","@angular-eslint/eslint-plugin-template":"~16.0.0","@angular-eslint/template-parser":"~16.0.0","@angular/cli":"~16.2.0","@angular/compiler-cli":"~16.2.0","@angular/language-service":"~16.2.0","@nestjs/schematics":"^10.0.2","@nestjs/testing":"^10.2.2","@nx/cypress":"16.10.0","@nx/eslint-plugin":"^16.7.4","@nx/jest":"16.10.0","@nx/js":"16.10.0","@nx/linter":"^16.7.4","@nx/nest":"^16.7.4","@nx/node":"^16.7.4","@nx/web":"16.10.0","@nx/webpack":"^16.7.4","@nx/workspace":"^16.7.4","@schematics/angular":"~16.2.0","@types/aos":"^3.0.4","@types/crypto-js":"^4.1.2","@types/file-saver":"^2.0.5","@types/jest":"^29.5.4","@types/multer":"^1.4.8","@types/node":"~18.7.1","@typescript-eslint/eslint-plugin":"^5.62.0","@typescript-eslint/parser":"^5.62.0","cypress":"^13.0.0","eslint":"~8.46.0","eslint-config-prettier":"^8.1.0","eslint-plugin-cypress":"^2.14.0","jest":"^29.6.4","jest-environment-jsdom":"^29.6.4","jest-environment-node":"^29.6.4","jest-preset-angular":"~13.1.0","jsonc-eslint-parser":"^2.1.0","nx":"^16.7.4","nx-cloud":"^16.3.0","prettier":"^2.8.8","ts-jest":"^29.1.1","ts-node":"^10.9.1","typescript":"~5.1.3"}}');
 
 /***/ })
 /******/ 	]);

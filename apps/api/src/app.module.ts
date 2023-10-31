@@ -5,9 +5,11 @@ import { MailerModule } from '@nestjs-modules/mailer';
 import { join } from 'path';
 
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
+import { StatusModule } from './modules/status/status.module';
 @Module({
   imports: [
     MailModule,
+    StatusModule,
     MailerModule.forRoot({
       transport: process.env.EMAIL_TRANSPORT,
       defaults: {
