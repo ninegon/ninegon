@@ -21,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
+import { IconSnackBarComponent } from './components/layouts/icon-snack-bar/icon-snack-bar.component';
 
 // import { QuillConfigModule, QuillModule } from 'ngx-quill';
 
@@ -31,6 +32,7 @@ registerLocaleData(localeEs, 'es');
   declarations: [
     AppComponent,
     HomeComponent,
+    IconSnackBarComponent
   ],
   imports: [
     // QuillModule.forRoot(),

@@ -1224,10 +1224,20 @@ section {
   margin-bottom: 20px;
 }
 
-.pricing .box h4 sup {
+.pricing .box h4 sup{
   font-size: 20px;
   top: -15px;
   left: -3px;
+}
+.pricing .box h4 span sub{
+  font-size: 16px;
+  // top: -15px;
+  // left: -3px;
+}
+.pricing .box h4 sub{
+  font-size: 20px;
+  // top: -15px;
+  // left: -3px;
 }
 
 .pricing .box h4 span {

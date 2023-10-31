@@ -4,6 +4,8 @@ import * as AOS from "aos";
 import { FormControl } from '@angular/forms';
 // import { IconSnackBarComponent } from '../../layouts/icon-snack-bar/icon-snack-bar.component';
 import { Title } from '@angular/platform-browser';
+import { MainService } from '../../../services/main.service';
+import { IconSnackBarComponent } from '../../layouts/icon-snack-bar/icon-snack-bar.component';
 
 
 @Component({
@@ -18,7 +20,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   mouseIn = false
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private mainService: MainService) { }
 
   year = new Date().getFullYear()
   navbarOpen = false;
@@ -67,7 +69,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   };
 
   contactUs() {
-    
+    this.mainService.contactUs(this.contact.value, this.message.value).then(() => {
+      this.mainService._snackBar.openFromComponent(IconSnackBarComponent, { data: { icon: 'save', message: 'Email enviado' } })
+    }).catch(_ => {
+      this.mainService._snackBar.openFromComponent(IconSnackBarComponent, { data: { icon: 'error_outline', message: 'Email no enviado' } })
+    }).finally(() => {
+      this.contact.setValue(null)
+      this.message.setValue(null)
+    })
   }
 
 }
